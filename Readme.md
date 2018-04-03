@@ -9,7 +9,7 @@
 {:aliases
  {:repl {:extra-deps {darkleaf/repl-tools-deps
                       {:git/url "https://github.com/darkleaf/repl-tools-deps.git"
-                       :sha     "" }}
+                       :sha     "fd889965d8f2ccdec75785f3c5c24857d99fbac7"}}
          :main-opts ["-m" "darkleaf.repl-tools-deps"]}}
 }
 ```
@@ -20,7 +20,7 @@
 {:aliases
  {:repl {:extra-deps {darkleaf/repl-tools-deps
                       {:git/url "https://github.com/darkleaf/repl-tools-deps.git"
-                       :sha     "" }}
+                       :sha     "fd889965d8f2ccdec75785f3c5c24857d99fbac7"}}
          :main-opts ["-m" "darkleaf.repl-tools-deps"
                      "reload-before-fn" "user/stop"
                      "reload-after-fn" "user/start"]}}
