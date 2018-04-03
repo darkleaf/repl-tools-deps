@@ -5,6 +5,24 @@
 + `:repl/reload`
 + `:repl/reload-all`
 
+Если при перезагрузке произошла ошибка, то она доступна как `*e`:
+
+```
+:repl/reload-all
+:reloading (some.namespace)
+:error-while-loading some.namespace
+user=> *e
+#error {
+...
+}
+```
+
+Добавляет поддержку запуска тестов с помощью команд:
+
++ `:repl/run-tests`
+
+deps.edn:
+
 ```edn
 {:aliases
  {:repl {:extra-deps {darkleaf/repl-tools-deps
@@ -27,18 +45,4 @@
 }
 ```
 
-Если при перезагрузке произошла ошибка, то она доступна как `*e`:
-
-```
-:repl/reload-all
-:reloading (some.namespace)
-:error-while-loading some.namespace
-user=> *e
-#error {
-...
-}
-```
-
-Добавляет поддержку запуска тестов с помощью команд:
-
-+ `:repl/run-tests`
+usage: clojure -Arepl
