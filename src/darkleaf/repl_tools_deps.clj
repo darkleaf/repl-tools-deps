@@ -18,14 +18,14 @@
 
 (defmethod commands/command :repl/reload [_]
   (before)
-  (ctn.repl/refresh :after 'darkleaf.repl/after))
+  (ctn.repl/refresh :after 'darkleaf.repl-tools-deps/after))
 
 (defmethod commands/command-doc :repl/reload-all [_]
   "Reload all namespaces.")
 
 (defmethod commands/command :repl/reload-all [_]
   (before)
-  (ctn.repl/refresh-all :after 'darkleaf.repl/after))
+  (ctn.repl/refresh-all :after 'darkleaf.repl-tools-deps/after))
 
 ;; ~~~~~~~~~~~~~~~~ testing ~~~~~~~~~~~~~~~~
 
