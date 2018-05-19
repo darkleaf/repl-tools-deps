@@ -33,9 +33,9 @@
   "Run all tests in test directory.")
 
 (defmethod commands/command :repl/run-tests [_]
-  (let [nses (-> "test"
-                 io/file
-                 ctn.find/find-namespaces-in-dir)]
+  (let [nses (->> ["src" "test"]
+                  (map io/file)
+                  (mapcat ctn.find/find-namespaces-in-dir))]
     (doseq [ns nses] (require ns))
     (apply t/run-tests nses)))
 
